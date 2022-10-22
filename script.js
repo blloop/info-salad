@@ -1,31 +1,18 @@
-// Create structure to store data locally
-var data_salad = {
+var i = 0;
 
-    // JSON to store values to compute
-    items: {},
+function calculate() {
 
-    // Save and load data from browser
-    save: () => {
-      localStorage.setItem('data_salad', JSON.stringify(data_salad));
-    }, 
-    load: () => {
-        data_salad = localStorage.getItem('data_salad'); 
-        if (data_salad == null) {
-            data_salad = {};
-        } else {
-            data_salad = JSON.parse(data_salad);
-        }
-    },
-
-    init: () => {
-        info_salad.load();
-        info_salad.list();
-    },
-
-    list: () => {}
+    i++;
+    // let output = `You clicked ${i} times! `;
+    let output = ``;
+    let link_input = document.getElementById('input').value;
+    output += `<br>`;
+    output += `Reading link: `;
+    output += link_input;
+    output += `...`;
+    document.getElementById('output').innerHTML = output;
 
 }
 
-function displayText() {
-    alert("You clicked a button!");
-}
+// Execute function upon page load
+// window.addEventListener('DOMContentLoaded', myfunc);
