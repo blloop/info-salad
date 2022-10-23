@@ -26,3 +26,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+const openPopup = document.getElementById("info");
+
+let open = false;
+
+// Outside click to close donate
+overlay.addEventListener('click', () => {
+  const pop = document.getElementById("popup");
+  if (open) {
+    close();
+    open = false;
+  } else {
+    open();
+    open = true;
+  }
+});
+
+// Escape key to close
+$(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+      close();
+    }
+});
+
+// Open popup
+function open() {
+  document.getElementById('popup').innerHTML = "hello";
+};
+
+// Close popup
+function close() {
+  document.getElementById('popup').innerHTML = "";
+};

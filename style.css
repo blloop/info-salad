@@ -9,7 +9,7 @@ body {
     background-color: #f5f0df;
 }
 
-#info {
+#open_popup {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -19,10 +19,9 @@ body {
     border-radius: 20px;
     text-align: center;
     font-size: 18px;
-    
 }
 
-#info:hover {
+#open_popup:hover {
     background-color: grey;
     cursor: pointer;
 }
@@ -64,4 +63,8 @@ body {
     border-radius: 5px;
     background-color: lightgrey;
     font-weight: bold;
+}
+
+#popup.open {
+    width: 200px;
 }

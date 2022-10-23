@@ -1,4 +1,6 @@
 # info-salad
+A browser extension that uses a web scraper to estimate the carbon footprint of opening a website. 
+
 DubHacks '22
 
 Requirements to run:
