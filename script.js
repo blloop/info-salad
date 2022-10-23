@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const output = document.getElementById('output');
-  const output2 = document.getElementById('output');
+  const output2 = document.getElementById('output2');
   chrome.tabs.query({currentWindow: true, active: true}, function(tabs) {
 
     let http_request = 'http://127.0.0.1:5000/query/?url=' + tabs[0].url
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(function (jsonResponse) {
         output.innerHTML = jsonResponse.bytes;
         let calculation = (jsonResponse.bytes * 0.00000004242 * 0.00248138957);
-        output2.innerHTML = calculation;
+        output2.innerHTML = calculation.toFixed(8);
       })
       .catch(error => {
         output.innerHTML = "Failed to fetch data!"

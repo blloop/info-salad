@@ -47,16 +47,16 @@ header h1 {
 
 .result {
     padding: 10px 4% 5px; 
-    font-size: 15px;
+    font-size: 20px;
     width: 92%;
     line-height: 30px;
     text-align: center;
     font-family: trebuchet ms, sans-serif;
 }
 
-#smoke {
+#smoke, #car {
     width: 30px;
-    height: 30px;
+    height: 25px;
 }
 
 #output, #output2 {

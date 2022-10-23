@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: trebuchet ms, sans-serif; */
+}
+
+html {
+    background-color: grey;
+}
+
+body {
+    background-color: #f5f0df;
+    margin: 0 20%;
+    width: 60%;
+    height: 100vh;
+}
+
+#title{
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'PTF NORDIC Std', sans-serif;
+}
+
+#line {
+    width: 80%;
+    margin: 10px 10% 0;
+    height: 2px;
+    background-color: black;
+}
