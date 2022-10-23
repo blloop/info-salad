@@ -16,9 +16,9 @@ def scrape_url():
     soup = BeautifulSoup(page.content, "html.parser")
     text = (soup.get_text().strip())
     bytes = len(str(text)) + 1
-    CO_two = (bytes * 0.00000000006 * 707)
-    # print(CO_two)
-    return('{:.100f}'.format(CO_two))
+    # CO_two = (bytes * 0.00000000006 * 707)
+    # print(bytes)
+    return((str(bytes)))
     
 if __name__ == "__main__":
     app.run(debug=True)
