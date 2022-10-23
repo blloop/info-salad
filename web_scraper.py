@@ -23,13 +23,12 @@ def scraped():
     images = soup.find().findAll('img')
     for i in images:
         url = i.get('src')
-        while (url[0] == '/'):
-            url = url[1:]
-        bytes += len(requests.get(i.get('src')).content)
-        print(len(requests.get(i.get('src')).content))
-        print("TOTAL BYTES: "+ str(bytes)) 
-
-    # CO_two = (bytes * 0.00000000006 * 707)
+        if (len(url) > 0):
+            while (url[0] == '/'):
+                url = url[1:]
+            bytes += len(requests.get(i.get('src')).content)
+            print(len(requests.get(i.get('src')).content))
+            print("TOTAL BYTES: "+ str(bytes))
 
     return(jsonify({'bytes' : bytes}))
     

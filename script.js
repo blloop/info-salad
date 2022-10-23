@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(function (jsonResponse) {
         let calculation = (jsonResponse.bytes * 0.00000004242);
-        output.innerHTML = calculation.toFixed(8);
-        let calculation2 = (jsonResponse.bytes * 0.00000000010526055);
-        output2.innerHTML = calculation2.toFixed(8);
+        output.innerHTML = calculation.toFixed(10);
+        let calculation2 = (jsonResponse.bytes * 0.00000000010526055 * 1609.34);
+        output2.innerHTML = calculation2.toFixed(10);
       })
       .catch(error => {
         output.innerHTML = "Failed to fetch data!"
