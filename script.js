@@ -27,35 +27,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const openPopup = document.getElementById("info");
+// const openPopup = document.getElementById("info");
 
-let open = false;
+// let open = false;
 
-// Outside click to close donate
-overlay.addEventListener('click', () => {
-  const pop = document.getElementById("popup");
-  if (open) {
-    close();
-    open = false;
-  } else {
-    open();
-    open = true;
-  }
-});
+// // Outside click to close donate
+// overlay.addEventListener('click', () => {
+//   const pop = document.getElementById("popup");
+//   if (open) {
+//     close();
+//     open = false;
+//   } else {
+//     open();
+//     open = true;
+//   }
+// });
 
-// Escape key to close
-$(document).keydown(function(e) {
-    if (e.keyCode == 27) {
-      close();
-    }
-});
+// // Escape key to close
+// $(document).keydown(function(e) {
+//     if (e.keyCode == 27) {
+//       close();
+//     }
+// });
 
-// Open popup
-function open() {
-  document.getElementById('popup').innerHTML = "hello";
-};
+// // Open popup
+// function open() {
+//   document.getElementById('popup').innerHTML = "hello";
+// };
 
-// Close popup
-function close() {
-  document.getElementById('popup').innerHTML = "";
-};
+// // Close popup
+// function close() {
+//   document.getElementById('popup').innerHTML = "";
+// };
