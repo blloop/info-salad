@@ -5,20 +5,63 @@
 }
 
 body {
-    width: 300px;
+    width: 250px;
+    background-color: #f5f0df;
+}
+
+#info {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+#info:hover {
+    background-color: grey;
+    cursor: pointer;
 }
 
 #logo {
-    width: 100px;
-    margin: 20px 100px 0;
+    width: 80px;
+    margin: 10px 85px;
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
+    font-family: 'PTF NORDIC Std', sans-serif;
 }
 
-#output {
-    padding: 20px; 
-    font-size: 20px;
+#line {
+    width: 80%;
+    margin: 10px 10% 0;
+    height: 2px;
+    background-color: black;
+}
+
+.result {
+    padding: 10px 4% 5px; 
+    font-size: 15px;
+    width: 92%;
+    line-height: 30px;
+    text-align: center;
+    font-family: trebuchet ms, sans-serif;
+}
+
+#smoke {
+    width: 30px;
+    height: 30px;
+}
+
+#output, #output2 {
+    padding: 4px 7px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    font-weight: bold;
 }
