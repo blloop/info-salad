@@ -19,7 +19,7 @@ def scraped():
     text = (soup.get_text().strip())
     bytes = len(str(text)) + 1
 
-    # CO_two = (bytes * 0.00000000006 * 707)
+    # CO2 = (bytes * 0.00000000006 * 707)
 
     return(jsonify({'bytes' : bytes}))
     
