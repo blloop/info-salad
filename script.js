@@ -1,18 +1,45 @@
-var i = 0;
+console.log("Hello");
 
-function calculate() {
+document.addEventListener('DOMContentLoaded', () => {
+    const output = document.getElementById('output');
+    const query = { active: true, currentWindow: true };
 
-    i++;
-    // let output = `You clicked ${i} times! `;
-    let output = ``;
-    let link_input = document.getElementById('input').value;
-    output += `<br>`;
-    output += `Reading link: `;
-    output += link_input;
-    output += `...`;
-    document.getElementById('output').innerHTML = output;
+    chrome.tabs.query(query, (tabs) => {
+        output.innerHTML = getTabName(tabs[0].title);
+    });
 
+    // --------------------------
+
+    var protocolVersion = '1.0';
+    chrome.debugger.attach({
+        tabId: tabId
+    }, protocolVersion, function() {
+        if (chrome.runtime.lastError) {
+            console.log(chrome.runtime.lastError.message);
+            return;
+        }
+        // Debugger is attached
+        chrome.debugger.sendCommand({
+            tabId: tabId
+        }, "Network.enable", {}, function(response) {
+            // Possible response: response.id / response.error
+            // 3. Change the User Agent string!
+            chrome.debugger.sendCommand({
+                tabId: tabId
+            }, "Network.responseReceived", {
+                userAgent: 'Whatever you want'
+            }, function(response) {
+                // Possible response: response.id / response.error
+                // 4. Now detach the debugger (this restores the UA string).
+                chrome.debugger.detach({tabId: tabId});
+            });
+        });
+    });
+
+    // --------------------------
+});
+
+const getTabName = (tabTitle) => {
+    const retName = `The title of this tab is: ${tabTitle}`
+    return retName;
 }
-
-// Execute function upon page load
-// window.addEventListener('DOMContentLoaded', myfunc);

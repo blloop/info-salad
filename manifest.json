@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Info Salad",
+  "description": "Track Your Web Footprint!",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "*://website.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://website.com/*"],
+      "run_at": "document_start",
+      "js": ["inject.js"]
+    }
+  ]
+}

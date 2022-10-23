@@ -1,12 +1,19 @@
 * {
-    padding: 10px;
-    font-size: 30px;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
 
-h1 {
-    font-size: 40px;
+body {
+    width: 300px;
 }
 
-input {
-    width: 50%;
+#logo {
+    width: 100px;
+    margin: 0 100px;
+}
+
+header h1 {
+    font-size: 35px;
+    text-align: center;
 }
