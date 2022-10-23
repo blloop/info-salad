@@ -4,7 +4,7 @@ DubHacks '22
 Requirements to run:
 * Python 3.10
 * Flask
-* requests
+* Requests
 * BeautifulSoup
 
 Sources:
