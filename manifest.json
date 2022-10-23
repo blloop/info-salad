@@ -8,16 +8,9 @@
     "default_icon": "hello_extensions.png"
   },
   "permissions": [
+    "http://*",
     "activeTab",
     "storage",
-    "tabs",
-    "*://website.com/*"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["*://website.com/*"],
-      "run_at": "document_start",
-      "js": ["inject.js"]
-    }
+    "tabs"
   ]
 }
